@@ -1,0 +1,88 @@
+/* pages/detail/detail.wxss */
+
+.bg {
+    width: 750rpx;
+    height: 400rpx;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pic-img {
+    width: 200rpx;
+    height: 284rpx;
+    margin-right: 20rpx;
+    border: 1rpx solid #fff;
+}
+
+.movies {
+    padding: 20rpx;
+}
+
+.movie-item {
+    display: flex;
+    flex-direction: row;
+    padding: 20rpx;
+    height: 380rpx;
+}
+
+.info {
+    flex-grow: 1;
+    font-size: 0.85em;
+    color: #fff;
+}
+
+.movie-item .info view {
+    padding: 5rpx 0;
+}
+
+.hr-2 {
+    border-bottom: 2rpx solid #ccc;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2em;
+}
+
+.title-txt {
+    flex-grow: 1; /*同一个父元素的子元素各自占自己的空间，剩余空间交给当前元素*/
+}
+
+.rating {
+    color: #f16113;
+}
+
+.movie-desc {
+    padding: 30rpx;
+    font-size: 0.85em;
+}
+
+.hr-15 {
+    border: 15rpx solid #ccc;
+}
+
+.casts-title {
+    padding: 30rpx;
+    border-bottom: 1rpx solid #ccc;
+}
+
+.casts {
+    white-space: nowrap; /*不换行*/
+    width: 750rpx;
+}
+
+.cast-item {
+    display: inline-block; /*行内块*/
+    padding: 20rpx;
+    text-align: center;
+}
+
+.cast-img {
+    width: 200rpx;
+    height: 280rpx;
+}

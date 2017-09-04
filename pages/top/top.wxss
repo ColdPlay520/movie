@@ -1,0 +1,36 @@
+/* pages/top/top.wxss */
+.pic-img{
+  width:200rpx;
+  height:284rpx;
+  margin-right: 20rpx;
+}
+.movies{
+  padding:20rpx;
+}
+.movie-item{
+  display: flex;
+  flex-direction: row;
+  padding:10rpx 0;
+}
+.info{
+  flex-grow: 1;
+  font-size:0.85em;
+}
+.movie-item .info view{
+  padding:5rpx 0;
+}
+.hr-2{
+  border-bottom: 2rpx solid #ccc;
+}
+.title{
+  display: flex;
+  flex-direction: row;
+  font-size:1.2em;
+}
+
+.title-txt{
+  flex-grow: 1;/*同一个父元素的子元素各自占自己的空间，剩余空间交给当前元素*/
+}
+.rating{
+  color:#F16113;
+}

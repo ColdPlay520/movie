@@ -1,0 +1,65 @@
+<!--pages/detail/detail.wxml-->
+<image class='bg' src='../../assets/imgs/bg.jpg' mode='scaleToFill'></image>
+<view class='content'>
+    <view class='movie-item'>
+        <view class='pic'>
+            <image src='{{movie.images.medium}}' class='pic-img'></image>
+        </view>
+
+        <view class='info'>
+            <view class='title'>
+                <view class='title-txt'>名称:{{movie.title}}</view>
+                <view class='rating'>{{movie.rating.average}}分</view>
+            </view>
+
+            <view>
+                类型:
+                <blobk wx:for="{{movie.genres}}" wx:for-item="g">
+                    {{g}},
+                </blobk>
+            </view>
+            <view>
+                导演:
+                <block wx:for="{{movie.directors}}" wx:for-item="d">
+                    {{d.name}},
+                </block>
+            </view>
+
+            <view>
+                演员:
+                <block wx:for="{{movie.casts}}" wx:for-item="c">
+                    {{c.name}},
+                </block>
+            </view>
+
+            <view>
+                年份:{{movie.year}}
+            </view>
+        </view>
+    </view>
+
+    <view class='movie-desc'>
+        {{movie.summary}}
+    </view>
+    <view class='hr-15'></view>
+    <view class='casts-title'>
+        主要演职人员
+    </view>
+    <scroll-view scroll-x class='casts'>
+        <block wx:for="{{movie.directors}}" wx:for-item="d">
+            <view class='cast-item'>
+                <image class='cast-img' src='{{d.avatars.medium}}'></image>
+                <view>(导演){{d.name}}</view>
+            </view>
+        </block>
+        <block wx:for="{{movie.casts}}" wx:for-item="c">
+            <view class='cast-item'>
+                <image class='cast-img' src='{{c.avatars.medium}}'></image>
+                <view>{{c.name}}</view>
+            </view>
+        </block>
+    </scroll-view>
+    <view class='hr-15'></view>
+    <view class='casts-title'>剧照</view>
+    <scroll-view scroll-x class='casts'></scroll-view>
+</view>

@@ -1,0 +1,40 @@
+<!--pages/top/top.wxml-->
+<!-- 电影列表 -->
+<view class='movies'>
+    <block wx:for="{{subjects}}" wx:for-item="m">
+        <view class='movie-item' bindtap='toDetail' id='{{m.id}}'>
+            <view class='pic'>
+                <image src='{{m.images.medium}}' class='pic-img'></image>
+            </view>
+            <view class='info'>
+                <view class='title'>
+                    <view class='title-txt'>名称:{{m.title}}</view>
+                    <view class='rating'>{{m.rating.average}}分</view>
+                </view>
+                <view class=''>
+                    类型:
+                    <block wx:for="{{m.genres}}" wx:for-item="g">
+                        {{g}},
+                    </block>
+                </view>
+                <view class=''>
+                    导演:
+                    <block wx:for="{{m.directors}}" wx:for-item="d">
+                        {{d.name}},
+                    </block>
+                </view>
+                <view class=''>
+                    演员:
+                    <block wx:for="{{m.casts}}" wx:for-item="c">
+                        {{c.name}},
+                    </block>
+                </view>
+                <view class=''>
+                    年份:{{m.year}}
+                </view>
+            </view>
+        </view>
+        <view class='hr-2'></view>
+    </block>
+</view>
+<!-- 电影列表 -->
